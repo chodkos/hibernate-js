@@ -1,0 +1,47 @@
+body{
+    padding: 10px;
+}
+
+.board{
+    margin:30px auto;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    width: 550px;
+    height: 444px;
+    border: 2px solid #ddd;
+    text-align: center;
+
+}
+
+.score{
+    text-align: right;
+    padding: 5px;
+
+}
+
+.tile{
+    position: absolute;
+    cursor: pointer;
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: #f6da17 url(images/title.png) center center no-repeat;
+    margin: 10px;
+
+}
+
+.tile:hover{
+    background-color:#F7C11A;
+}
+
+#startGame{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#name{
+    font-size: large;
+    margin-top: 50px;
+}

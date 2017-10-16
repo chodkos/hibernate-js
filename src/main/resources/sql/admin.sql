@@ -1,0 +1,11 @@
+DROP DATABASE IF EXISTS postgres;
+CREATE DATABASE postgres;
+
+-- user
+DROP USER IF EXISTS postgres;
+CREATE USER postgres WITH PASSWORD '123';
+
+-- privileges
+GRANT ALL PRIVILEGES ON DATABASE postgres TO postgres;
+GRANT USAGE ON SCHEMA public TO postgres;
+ALTER USER postgres WITH SUPERUSER;

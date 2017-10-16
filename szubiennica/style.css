@@ -1,0 +1,63 @@
+body{
+
+    font-size: 28px;
+
+}
+
+#screen
+{
+    background-color: blue;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#board{
+
+    width: 900px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 48px;
+    min-height: 60px;
+}
+
+#gallows{
+    float: left;
+    width: 45%;
+    text-align: center;
+    min-height: 280px;
+}
+
+#alphabet{
+    float: left;
+    width: 40%;
+    text-align: center;
+    min-height: 280px;
+    margin-left: 15%;
+
+}
+
+.letter{
+    width: 30px;
+    height: 30px;
+    border: 3px solid gray;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 3px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.letter:hover
+{
+    background-color: blue;
+    border: 3px solid red;
+    padding: 5px;
+    margin: 3px;
+    float: left;
+    text-align: center;
+
+}

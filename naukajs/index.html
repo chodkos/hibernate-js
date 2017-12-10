@@ -5,16 +5,18 @@
     <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="memory.js"></script>
+    <script src="player.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="score">Score: 15</div>
+<div class="score">Score: </div>
 
 <div class="board">
     Podaj swoje imię: <input type="text" id="name">
 </div>
 
+<button id="newPlayer" onclick="createNewPlayer()">Create Player</button>
 <button id="startGame" onclick="startGame()">Start New Game</button>
 
 </body>

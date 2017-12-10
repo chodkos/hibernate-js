@@ -16,18 +16,29 @@ var tilesImgs = [
     'img/7.jpg',
 
 ]
-
-
+var currentPlayer = new Player();
+currentPlayer.name = "temp";
 
 for(i = 0; i < tilesCount; i++)
 {
     tiles.push(Math.floor(i/2));
 }
 
+function createNewPlayer() {
+    name = $("#name").val();
+    currentPlayer = new Player(name);
+    document.getElementById("newPlayer").style.display = "none";
+    $('.board').html("Utworzono gracza");
+    $('board').textContent = "Utworzono gracza";
+}
+
 function startGame() {
+
+
     pairs = 0
     movesCount = 0;
-    name = $("#name").val();
+    $('.score').html(movesCount);
+
 
     var boardToFill = $('.board').empty();
 
@@ -90,7 +101,10 @@ function startGame() {
             $(this).remove();
             pairs += 1;
             if(pairs >= tilesCount/2){
-               alert(name);
+                currentPlayer.addScore(movesCount);
+                alert(currentPlayer.name);
+                alert(currentPlayer.scoreBoard);
+
                console.log(pairs)
             }
             mayTouch = true;

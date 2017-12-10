@@ -41,6 +41,12 @@ body{
     margin-right: auto;
 }
 
+#newPlayer{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #name{
     font-size: large;
     margin-top: 50px;

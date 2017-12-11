@@ -29,7 +29,13 @@ function createNewPlayer() {
     currentPlayer = new Player(name);
     document.getElementById("newPlayer").style.display = "none";
     $('.board').html("Utworzono gracza");
-    $('board').textContent = "Utworzono gracza";
+    getPlayerScoreboard();
+
+
+
+
+
+
 }
 
 function startGame() {
@@ -104,6 +110,8 @@ function startGame() {
                 currentPlayer.addScore(movesCount);
                 alert(currentPlayer.name);
                 alert(currentPlayer.scoreBoard);
+                setCookie(currentPlayer.name, currentPlayer.scoreBoard, 2);
+                alert(document.cookie);
 
                console.log(pairs)
             }

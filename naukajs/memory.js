@@ -20,16 +20,18 @@ var currentPlayer = new Player();
 currentPlayer.name = "temp";
 
 for(i = 0; i < tilesCount; i++)
-{
+{document.getElementById("newPlayer").innerHTML
     tiles.push(Math.floor(i/2));
 }
 
 function createNewPlayer() {
     name = $("#name").val();
     currentPlayer = new Player(name);
-    document.getElementById("newPlayer").style.display = "none";
+    //document.getElementById("newPlayer").style.display = "none";
     $('.board').html("Utworzono gracza");
     getPlayerScoreboard();
+    document.getElementById("newPlayer").innerHTML = "Start Game";
+    document.getElementById("newPlayer").onclick = function () {startGame()} ;
 
 
 
@@ -107,12 +109,13 @@ function startGame() {
             $(this).remove();
             pairs += 1;
             if(pairs >= tilesCount/2){
+                alert(currentPlayer.scoreBoard);
                 currentPlayer.addScore(movesCount);
                 alert(currentPlayer.name);
                 alert(currentPlayer.scoreBoard);
                 setCookie(currentPlayer.name, currentPlayer.scoreBoard, 2);
                 alert(document.cookie);
-
+                printScore();
                console.log(pairs)
             }
             mayTouch = true;

@@ -13,12 +13,18 @@
 
 <div class="score">Score: </div>
 
-<div class="board">
-    Podaj swoje imię: <input type="text" id="name">
+<button id="newPlayer" onclick="createNewPlayer()">Create Player</button>
+
+<div class="wrapper">
+    <div class="board">
+        Podaj swoje imię: <input type="text" id="name">
+    </div>
+    <button id="showScoreboard" onclick="printScore()">Show Scoreboard</button>
+    <div class="scores"></div>
 </div>
 
-<button id="newPlayer" onclick="createNewPlayer()">Create Player</button>
-<button id="startGame" onclick="startGame()">Start New Game</button>
+
+
 
 </body>
 </html>
